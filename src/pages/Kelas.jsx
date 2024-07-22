@@ -6,7 +6,8 @@ import Faq from '../components/Faq';
 const Kelas = () => {
   return (
     <div className="portfolioPage">
-      <div className="portfolio min-vh-100">
+      <div className="portfolio">
+      {/* <div className="portfolio min-vh-100"> */}
         <Container>
           <Row>
             <Col>

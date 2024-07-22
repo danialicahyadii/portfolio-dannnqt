@@ -173,7 +173,8 @@ header {
 }
 
 .homePage .testimonial {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
+    background: #ffff;
 }
 
 .homePage .testimonial h1 {

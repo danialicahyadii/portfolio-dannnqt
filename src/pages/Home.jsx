@@ -93,10 +93,10 @@ const Home = () => {
         <Container>
           <Row>
             <Col>
-            <h1 className="text-center fw-bold my-5">Technology</h1>
+            <h1 className="text-center fw-bold my-5 animate__animated animate__fadeInUp">Technology</h1>
             </Col>
           </Row>
-          <Row>
+          <Row className="animate__animated animate__fadeInUp">
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
@@ -126,7 +126,7 @@ const Home = () => {
           >
             {dataSwiper.map((data, index)=> {
               return(
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} className="animate__animated animate__fadeInUp">
                   <img src={data.image} alt="javascript" width="50" height="40"/>
                 </SwiperSlide>
               )

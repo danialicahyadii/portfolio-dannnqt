@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer py-5">
       <Container>
-        {/* <Row className="d-flex justify-content-between">
+        <Row className="d-flex justify-content-between">
           <Col lg="5">
             <h3 className="fw-bold">Portfolio.</h3>
             <p className="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sapiente ipsum tenetur magnam minima dolore, officia error dolorem soluta quos.</p>
@@ -28,22 +28,22 @@ const Footer = () => {
             <Link to="">Home</Link>
             <Link to="kelas">Project</Link>
             <Link to="testimonial">Technology</Link>
-            <Link to="syaratketen">Contact</Link>
+            <Link to="syaratketen">Spotify</Link>
           </Col>
           <Col lg="4" className="mt-lg-0 mt-5">
-            <h5 className="fw-bold mb-3">Subscribe untuk info Menarik</h5>
-            <div className="subscribe">
+            <h5 className="fw-bold mb-3">Follow Me:</h5>
+            {/* <div className="subscribe">
               <input type="text" placeholder="Subscribe...." />
               <button className="btn btn-danger rounded-end rounded-0">Subscribe</button>
-            </div>
+            </div> */}
             <div className="social mt-3">
-              <i className="fa-brands fa-github"></i>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-linkedin"></i>
-              <i className="fa-brands fa-whatsapp"></i>
+              <a target='_blank' href="https://github.com/danialicahyadii" style={{ textDecoration:'none', color:'black' }}><i className="fa-brands fa-github"></i></a>
+              <a target='_blank' href="https://www.instagram.com/danialicahyadi" style={{ textDecoration:'none', color:'black' }}><i className="fa-brands fa-instagram"></i></a>
+              <a target='_blank' href="https://www.linkedin.com/in/danialicahyadi" style={{ textDecoration:'none', color:'black' }}><i className="fa-brands fa-linkedin"></i></a>
+              <a target='_blank' href="https://wa.me/6281289124536" style={{ textDecoration:'none', color:'black' }}><i className="fa-brands fa-whatsapp"></i></a>
             </div>
           </Col>
-        </Row> */}
+        </Row>
         <Row>
           <Col>
           <p className="text-center px-md-0 px-3">&copy; Copyright {new Date().getFullYear()} by <a target='_blank' href="https://www.instagram.com/danialicahyadi"><span className="fw-bold">Dani Ali Cahyadi</span></a>, All Right Reserved</p>
