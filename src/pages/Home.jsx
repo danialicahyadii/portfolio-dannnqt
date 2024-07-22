@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Row, Container } from 'react-bootstrap';
 import imageDani from '../assets/img/560216.png';
 import {kelasTerbaru, dataSwiper} from '../data/index';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Typewriter from 'typewriter-effect';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -15,6 +16,14 @@ import Faq from '../components/Faq';
 
 const Home = () => {
   let navigate = useNavigate();
+  const [autoStart, setAutoStart] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAutoStart(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
   const openWhatsapp = (noHp) => {
     window.open(`https://wa.me/${noHp}`, '_blank');
   };
@@ -24,7 +33,13 @@ const Home = () => {
         <Container>
           <Row className="header-box d-flex align-items-center pt-lg-5">
             <Col lg="6">
-            <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Halo semua 👋🏽 saya <br /><span>Dani Ali Cahyadi</span> <br /> <h4>Junior Front End Developer</h4>
+            <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Halo semua 👋🏽 saya <br /><span><Typewriter
+              options={{
+                strings: ['Dani Ali Cahyadi'],
+                autoStart: autoStart,
+                loop: true,
+              }}
+            /></span> <br /> <h4>Junior Front End Developer</h4>
             </h1>
             <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lahir di Bekasi, 2 Februari 2001. Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
             <button onClick={()=> openWhatsapp('6281289124536')} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Hubungi Saya</button>
