@@ -39,7 +39,7 @@ const Home = () => {
                 autoStart: autoStart,
                 loop: true,
               }}
-            /></span> <br /> <h4>Junior Front End Developer</h4>
+            /></span><h4>Junior Front End Developer</h4>
             </h1>
             <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lahir di Bekasi, 2 Februari 2001. Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
             <button onClick={()=> openWhatsapp('6281289124536')} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Hubungi Saya</button>
