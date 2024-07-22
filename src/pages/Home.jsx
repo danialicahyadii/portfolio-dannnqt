@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row, Container } from 'react-bootstrap';
-import imageDani from '../assets/img/hero.png';
+import imageDani from '../assets/img/560216.png';
 import {kelasTerbaru, dataSwiper} from '../data/index';
 import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,33 +15,33 @@ import Faq from '../components/Faq';
 
 const Home = () => {
   let navigate = useNavigate();
-
-  const playlistId = '3wtRcBveM2RfAEchIclj34';
-
+  const openWhatsapp = (noHp) => {
+    window.open(`https://wa.me/${noHp}`, '_blank');
+  };
   return (
     <div className="homePage">
       <header className="w-100 min-vh-100 d-flex align-items-center">
         <Container>
           <Row className="header-box d-flex align-items-center pt-lg-5">
             <Col lg="6">
-            <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Temukan <br /><span>Bakat Kreatifmu</span> <br /> Bersama Kami!
+            <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Halo semua 👋🏽 saya <br /><span>Dani Ali Cahyadi</span> <br /> <h4>Junior Front End Developer</h4>
             </h1>
-            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere neque perferendis atque quo autem consequatur nemo blanditiis magnam provident necessitatibus.</p>
-            <button onClick={()=> navigate("/portfolio")} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Lihat Kelas</button>
-            <button className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Lihat Promo</button>
+            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lahir di Bekasi, 2 Februari 2001. Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
+            <button onClick={()=> openWhatsapp('6281289124536')} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Hubungi Saya</button>
+            {/* <button className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Lihat Promo</button> */}
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5 text-center">
-            <img src={imageDani} alt="" className="animate__animated animate__fadeInUp" />
+            <img src={imageDani} alt="" className="animate__animated animate__fadeInUp" style={{ width: '50%', height: 'auto' }}  />
             </Col>
           </Row>
         </Container>
       </header>
-      <div className="kelas w-100 min-vh-100">
+      {/* <div className="kelas w-100 min-vh-100">
         <Container>
           <Row>
             <Col>
-            <h1 className="text-center fw-bold">Kelas Terbaru</h1>
-            <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h1 className="text-center fw-bold">Project Terbaru</h1>
+            <p className="text-center">Beberapa project yang pernah saya kerjakan ketika memulai karir di dunia web developer hingga saat ini.</p>
             </Col>
           </Row>
           <Row>
@@ -68,17 +68,17 @@ const Home = () => {
           <Row>
             <Col className="text-center">
               <button className="btn btn-outline-success rounded-5 btn-lg" data-aos="fade-up" data-aos-duration="1000" onClick={() => navigate("/kelas")}>
-                Lihat Semua Kelas <i className="fa-solid fa-chevron-right ms-1"></i>
+                Lihat Semua Project <i className="fa-solid fa-chevron-right ms-1"></i>
                 </button>
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
       <div className="testimonial py-5">
         <Container>
           <Row>
             <Col>
-            <h1 className="text-center fw-bold my-5">Testimonial</h1>
+            <h1 className="text-center fw-bold my-5">Technology</h1>
             </Col>
           </Row>
           <Row>
@@ -98,11 +98,11 @@ const Home = () => {
                 spaceBetween: 40,
               },
               992: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 50,
               },
               1200: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 50,
               }
             }}
@@ -111,15 +111,8 @@ const Home = () => {
           >
             {dataSwiper.map((data, index)=> {
               return(
-                <SwiperSlide key={index} className="shadow-sm">
-                  <p className="desc">{data.desc}</p>
-                  <div className="people">
-                    <img src={data.image} alt="" />
-                    <div>
-                      <h5 className="mb-1">{data.name}</h5>
-                      <p className="m-0 fw-bold">{data.skill}</p>
-                    </div>
-                  </div>
+                <SwiperSlide key={index}>
+                  <img src={data.image} alt="javascript" width="50" height="40"/>
                 </SwiperSlide>
               )
             })}
@@ -127,31 +120,6 @@ const Home = () => {
           </Row>
         </Container>
       </div>
-      <div className="testimonial py-5">
-        <Container>
-          <Row>
-            <Col>
-            <h1 className="text-center fw-bold my-5">Lagu Favorit</h1>
-            <p className="fw-medium text-center">Sedikit Playlist untuk penyegaran hidup, Lets goo!!!</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="text-center py-5 px-5 bg-light" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <iframe
-                title="Spotify Embed: Recommendation Playlist "
-                src={`https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`}
-                width="80%"
-                height="700"
-                style={{ minHeight: '360px' }}
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <Faq/>
     </div>
   )
 }

@@ -59,18 +59,23 @@ header {
 }
 
 .homePage .header-box h1 {
-    font-size: 3.2rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 300;
     color: var(--color-text);
     --animate-delay: 0.6s;
 }
 
 .homePage .header-box h1 span {
     font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.homePage .header-box h4 {
+    padding-top: 10px;
 }
 
 .homePage .header-box p {
-    line-height: 2;
+    line-height: 1.5;
     color: var(--color-text);
     font-weight: 500;
     --animate-delay: 1s;
@@ -184,7 +189,7 @@ header {
 .homePage .testimonial .swiper-slide {
     text-align: left;
     font-size: 18px;
-    background: #fff;
+    /* background: #fff; */
     padding: 20px;
 
     /* Center slide text vertically */
@@ -396,7 +401,7 @@ header {
 /* Style Footer */
 .footer {
     width: 100%;
-    min-height: 60vh;
+    /* min-height: 60vh; */
 }
 
 .footer .row:nth-child(1) col.row:nth-child(1) h3 {

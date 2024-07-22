@@ -21,22 +21,17 @@ export const navLinks = [
   {
     id: 2,
     path: "kelas",
-    text: "Kelas",
+    text: "Project",
   },
   {
     id: 3,
     path: "testimonial",
-    text: "Testimonial",
+    text: "Technology",
   },
   {
     id: 4,
-    path: "faq",
-    text: "FAQ",
-  },
-  {
-    id: 5,
     path: "syaratketen",
-    text: "Syarat & Ketentuan",
+    text: "Spotify",
   },
 ];
 
@@ -310,43 +305,37 @@ export const testimonial = [
 export const dataSwiper = [
   {
     id: 1,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
     name: "People 1",
     skill: "UI UX Designer",
   },
   {
     id: 2,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png",
     name: "People 2",
     skill: "Flutter Developer",
   },
   {
     id: 3,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
+    image: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
     name: "People 3",
     skill: "Web Developer",
   },
   {
     id: 4,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People1,
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     name: "People 4",
     skill: "UI UX Designer",
   },
   {
     id: 5,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People2,
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg",
     name: "People 5",
     skill: "Flutter Developer",
   },
   {
     id: 6,
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, saepe a. Quod eos non, dolores sapiente dicta quam esse reprehenderit explicabo vitae nesciunt ut laborum harum, vel optio corporis voluptatem?",
-    image: People3,
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     name: "People 6",
     skill: "Web Developer",
   },

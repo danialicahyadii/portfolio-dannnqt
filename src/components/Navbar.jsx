@@ -43,7 +43,7 @@ const NavbarComponent = () => {
   return (
     <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
       <Container>
-        <Navbar.Brand href="#home" className="fs-3 fw-bold">Ngoding.</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fs-3 fw-bold">Portfolio.</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto text-center">
@@ -63,8 +63,8 @@ const NavbarComponent = () => {
             })}
           </Nav>
           <div className="text-center">
-            <button onClick={() => toast()} className="btn btn-outline-danger rounded-1 me-1">Join with us</button>
-            {/* <button onClick={() => toast()} className="btn btn-danger rounded-1 me-1">Login</button> */}
+            {/* <button onClick={() => toast()} className="btn btn-outline-danger rounded-1 me-1">Join with us</button> */}
+            <button onClick={() => toast()} className="btn btn-danger rounded-1 me-1">Login</button>
             {/* <button className="btn btn-outline-warning rounded-1">Register</button> */}
           </div>
         </Navbar.Collapse>

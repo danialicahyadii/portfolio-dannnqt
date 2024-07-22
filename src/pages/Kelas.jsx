@@ -10,11 +10,11 @@ const Kelas = () => {
         <Container>
           <Row>
             <Col>
-            <h1 className="fw-bold text-center animate__animated animate__fadeInUp animate__delay-1s">Semua Kelas</h1>
-            <p className="text-center animate__animated animate__fadeInUp animate__delay-1s">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 className="fw-bold text-center animate__animated animate__fadeInUp">Semua Project</h1>
+            <p className="text-center animate__animated animate__fadeInUp">Project yang pernah saya kerjakan.</p>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
           {semuaKelas.map((kelas, index)=>{
                 return(
                   <Col key={kelas.id} className="shadow rounded" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={kelas.delay}>
@@ -34,10 +34,9 @@ const Kelas = () => {
                   </Col>
                 )
               })}
-          </Row>
+          </Row> */}
         </Container>
       </div>
-      <Faq />
     </div>
   )
 }
