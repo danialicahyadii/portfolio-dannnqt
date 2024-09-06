@@ -72,7 +72,7 @@ export const semuaKelas = [
     title: "Rent Ease Midtrans payment gateway",
     // price: "Rp. 300.000",
     buy: "Download File",
-    link: "/kelas",
+    link: "/project",
     delay: "1300",
   },
   {
