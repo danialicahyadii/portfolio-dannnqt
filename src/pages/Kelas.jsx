@@ -4,6 +4,9 @@ import {semuaKelas} from '../data/index';
 import Faq from '../components/Faq';
 
 const Kelas = () => {
+  const viewProject = (e) => {
+    window.location.href = e.target.value;
+  }
   return (
     <div className="portfolioPage">
       <div className="portfolio">
@@ -15,7 +18,7 @@ const Kelas = () => {
             <p className="text-center animate__animated animate__fadeInUp">Project yang pernah saya kerjakan.</p>
             </Col>
           </Row>
-          {/* <Row>
+          <Row>
           {semuaKelas.map((kelas, index)=>{
                 return(
                   <Col key={kelas.id} className="shadow rounded" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={kelas.delay}>
@@ -30,12 +33,12 @@ const Kelas = () => {
                     <h5 className="mb-5 px-3">{kelas.title}</h5>
                     <div className="ket d-flex justify-content-between align-items-center px-3 pb-3">
                       <p className="m-0 text-primary fw-bold">{kelas.price}</p>
-                      <button className="btn btn-danger rounded-1">{kelas.buy}</button>
+                      <button onClick={(e) => viewProject(e)} value={kelas.link} className="btn btn-danger rounded-1">{kelas.buy}</button>
                     </div>
                   </Col>
                 )
               })}
-          </Row> */}
+          </Row>
         </Container>
       </div>
     </div>

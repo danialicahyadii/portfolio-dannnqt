@@ -27,6 +27,9 @@ const Home = () => {
   const openWhatsapp = (noHp) => {
     window.open(`https://wa.me/${noHp}`, '_blank');
   };
+  const viewProject = (e) => {
+    window.location.href = e.target.value;
+  }
   return (
     <div className="homePage">
       <header className="w-100 min-vh-100 d-flex align-items-center">
@@ -41,7 +44,7 @@ const Home = () => {
               }}
             /></span><h4>Junior Front End Developer</h4>
             </h1>
-            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lahir di Bekasi, 2 Februari 2001. Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
+            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
             <button onClick={()=> openWhatsapp('6281289124536')} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Hubungi Saya</button>
             {/* <button className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Lihat Promo</button> */}
             </Col>
@@ -51,7 +54,7 @@ const Home = () => {
           </Row>
         </Container>
       </header>
-      {/* <div className="kelas w-100 min-vh-100">
+      <div className="kelas w-100 min-vh-100">
         <Container>
           <Row>
             <Col>
@@ -74,7 +77,7 @@ const Home = () => {
                   <h5 className="mb-5 px-3">{kelas.title}</h5>
                   <div className="ket d-flex justify-content-between align-items-center px-3 pb-3">
                     <p className="m-0 text-primary fw-bold">{kelas.price}</p>
-                    <button className="btn btn-danger rounded-1">{kelas.buy}</button>
+                    <button onClick={(e) => viewProject(e)} value={kelas.link} className="btn btn-danger rounded-1">{kelas.buy}</button>
                   </div>
                 </Col>
               )
@@ -88,7 +91,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
       <div className="testimonial py-5">
         <Container>
           <Row>

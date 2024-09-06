@@ -20,7 +20,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path='/' Component={Home} />
-      <Route path='/kelas' Component={Kelas} />
+      <Route path='/project' Component={Kelas} />
       <Route path='/testimonial' Component={Testimonial} />
       <Route path='/faq' Component={Faq} />
       <Route path='/syaratketen' Component={SyaratKetentuan} />
