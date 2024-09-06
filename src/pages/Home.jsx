@@ -28,7 +28,7 @@ const Home = () => {
     window.open(`https://wa.me/${noHp}`, '_blank');
   };
   const viewProject = (e) => {
-    window.location.href = e.target.value;
+    window.open(e.target.value, '_blank');
   }
   return (
     <div className="homePage">
@@ -44,7 +44,7 @@ const Home = () => {
               }}
             /></span><h4>Junior Front End Developer</h4>
             </h1>
-            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022 dengan IPK 3,71.</p>
+            <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Saya lulusan S1 Sistem Informasi dari Universitas Pembangunan Nasional Veteran Jakarta pada tahun 2022.</p>
             <button onClick={()=> openWhatsapp('6281289124536')} className="btn btn-danger text-white btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Hubungi Saya</button>
             {/* <button className="btn btn-outline-danger btn-lg rounded-1 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s">Lihat Promo</button> */}
             </Col>
@@ -59,7 +59,7 @@ const Home = () => {
           <Row>
             <Col>
             <h1 className="text-center fw-bold">Project Terbaru</h1>
-            <p className="text-center">Beberapa project yang pernah saya kerjakan ketika memulai karir di dunia web developer hingga saat ini.</p>
+            <p className="text-center">Beberapa project yang pernah saya kerjakan ketika memulai karir di dunia web developer hingga saat ini masih belajar.</p>
             </Col>
           </Row>
           <Row>
@@ -77,7 +77,11 @@ const Home = () => {
                   <h5 className="mb-5 px-3">{kelas.title}</h5>
                   <div className="ket d-flex justify-content-between align-items-center px-3 pb-3">
                     <p className="m-0 text-primary fw-bold">{kelas.price}</p>
-                    <button onClick={(e) => viewProject(e)} value={kelas.link} className="btn btn-danger rounded-1">{kelas.buy}</button>
+                    {kelas.link ? (
+                        <button onClick={(e) => viewProject(e)} value={kelas.link} className="btn btn-danger rounded-1">{kelas.buy}</button>
+                      ) : (
+                        <button onClick={() => navigate("/project")} className="btn btn-danger rounded-1">Download File</button>
+                      )}
                   </div>
                 </Col>
               )
@@ -85,7 +89,7 @@ const Home = () => {
           </Row>
           <Row>
             <Col className="text-center">
-              <button className="btn btn-outline-success rounded-5 btn-lg" data-aos="fade-up" data-aos-duration="1000" onClick={() => navigate("/kelas")}>
+              <button className="btn btn-outline-success rounded-5 btn-lg" data-aos="fade-up" data-aos-duration="1000" onClick={() => navigate("/project")}>
                 Lihat Semua Project <i className="fa-solid fa-chevron-right ms-1"></i>
                 </button>
             </Col>

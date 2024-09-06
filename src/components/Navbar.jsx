@@ -43,7 +43,7 @@ const NavbarComponent = () => {
   return (
     <Navbar expand="lg" className={changeColor ? "color-active" : ""}>
       <Container>
-        <Navbar.Brand href="#home" className="fs-3 fw-bold">Portfolio.</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fs-3 fw-bold">Portofolio.</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto text-center">
