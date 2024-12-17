@@ -103,6 +103,25 @@ export const semuaKelas = [
     buy: "View",
     link: "https://katalog.devkftd.my.id/",
     delay: "1300",
+  },
+  {
+    id: 5,
+    image: KelasImage5,
+    star1Title: "Laravel",
+    star2Title: "PHP",
+    star3Title: "Bootstrap",
+    star4Title: "HTML5",
+    star5Title: "React",
+    star1: "fa-brands fa-laravel px-2",
+    star2: "fa-brands fa-php px-2",
+    star3: "fa-brands fa-bootstrap px-2",
+    star4: "fa-brands fa-html5 px-2",
+    star5: "fa-brands fa-react px-2",
+    title: "CMS Web Corporate KFTD",
+    // price: "Rp. 300.000",
+    buy: "View",
+    link: "https://cms.kftd.co.id/",
+    delay: "1400",
   }
 ];
 
